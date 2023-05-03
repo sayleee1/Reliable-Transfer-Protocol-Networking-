@@ -22,6 +22,7 @@ struct pkt {
 
 /* Implementation framework interface */
 void A_output(struct msg message);
+void B_output(struct msg message);
 void A_input(struct pkt packet);
 void A_timerinterrupt();
 void A_init();

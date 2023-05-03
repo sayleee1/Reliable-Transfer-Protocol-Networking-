@@ -5,12 +5,12 @@ OBJ_DIR	= ./object
 BINS = abt gbn sr
 
 LIBS = 
-CC	= gcc
+CC = /usr/bin/g++
 CFLAGS	= -g -I$(INC_DIR)
 
 all: $(BINS)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 $(BINS): %: $(OBJ_DIR)/simulator.o $(OBJ_DIR)/%.o
