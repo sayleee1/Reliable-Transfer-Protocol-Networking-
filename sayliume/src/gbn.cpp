@@ -20,12 +20,12 @@
 using namespace std;
 struct GBNProtocol
 {
-    unsigned int acknowledgement_number;
-    unsigned int sequence_number = 0;
-    unsigned int a_sequence_number, b_sequence_number;
-    unsigned int newest_sequence_number = 0;
-    unsigned int sequence_number_to_transport = 0;
-    unsigned int sequence_number_succeeded = 0;
+  unsigned int acknowledgement_number;
+  unsigned int sequence_number = 0;
+  unsigned int a_sequence_number, b_sequence_number;
+  unsigned int newest_sequence_number = 0;
+  unsigned int sequence_number_to_transport = 0;
+  unsigned int sequence_number_succeeded = 0;
 };
 
 list<pkt> packet_list;
@@ -154,5 +154,5 @@ void B_input(struct pkt packet)
 /* entity B routines are called. You can use it to do any initialization */
 void B_init()
 {
-    gbn_protocol.b_sequence_number = 0;
+  gbn_protocol.b_sequence_number = 0;
 }
