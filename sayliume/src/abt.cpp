@@ -69,7 +69,7 @@ void A_output(struct msg message)
     advance(itr, abt_protocol.a_sequence_number);
     new_packet = *itr;
     tolayer3(0, new_packet);
-    starttimer(0, 20.0);
+    starttimer(0, 25.0);
   }
 }
 
@@ -84,7 +84,7 @@ void A_input(struct pkt packet)
   }
   else
   {
-    starttimer(0, 20.0);
+    starttimer(0, 25.0);
     tolayer3(0, new_packet);
   }
 }
@@ -92,7 +92,7 @@ void A_input(struct pkt packet)
 /* called when A's timer goes off */
 void A_timerinterrupt()
 {
-  starttimer(0, 20.0);
+  starttimer(0, 25.0);
   tolayer3(0, new_packet);
 }
 
