@@ -31,8 +31,8 @@ struct SRProtocol
 
 list<pkt> packet_list;
 SRProtocol sr_protocol;
-vector<float> time_units;
 struct pkt new_packet;
+vector<float> time_units;
 float timeout = 0.0;
 
 unsigned int calculate_checksum(struct pkt);
